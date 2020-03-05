@@ -5,8 +5,8 @@ python:
   - 3.7
 before_install:
   - python --version
-  - pip install -U pip --user
-  - pip install poetry --user
+  - pip install -U pip
+  - pip install poetry
 install: poetry install
 script: poetry run pytest
 matrix:
@@ -17,8 +17,8 @@ matrix:
       language: shell       # 'language: python' is an error on Travis CI macOS
       before_install:
         - python --version
-        - pip install -U pip --user
-        - pip install poetry --user
+        - pip install -U pip
+        - pip install poetry
       install: poetry install
       script: poetry run pytest
     - name: "Python 3.6.5 on macOS 10.13"
@@ -28,7 +28,7 @@ matrix:
       before_install:
         - python3 --version
         - pip3 install -U pip
-        - pip install poetry --user
+        - pip install poetry
       install: poetry install
       script: poetry run pytest
     - name: "Python 3.7.3 on macOS 10.14"
@@ -38,7 +38,7 @@ matrix:
       before_install:
         - python3 --version
         - pip3 install -U pip
-        - pip install poetry --user
+        - pip install poetry
       install: poetry install
       script: poetry run pytest
     #  ====== WINDOWS =========
@@ -49,7 +49,7 @@ matrix:
         - choco install python2 --no-progress
         - python --version
         - python -m pip install --upgrade pip
-        - pip install poetry --user
+        - pip install poetry
       install: poetry install
       script: poetry run pytest
       env: PATH=/c/Python27:/c/Python27/Scripts:$PATH
@@ -60,7 +60,7 @@ matrix:
         - choco install python --version 3.5.4 --no-progress
         - python --version
         - python -m pip install --upgrade pip
-        - pip install poetry --user
+        - pip install poetry
       install: poetry install
       script: poetry run pytest
       env: PATH=/c/Python35:/c/Python35/Scripts:$PATH
@@ -71,7 +71,7 @@ matrix:
         - choco install python --version 3.6.8 --no-progress
         - python --version
         - python -m pip install --upgrade pip
-        - pip install poetry --user
+        - pip install poetry
       install: poetry install
       script: poetry run pytest
       env: PATH=/c/Python36:/c/Python36/Scripts:$PATH
@@ -82,7 +82,7 @@ matrix:
         - choco install python --version 3.7.4 --no-progress
         - python --version
         - python -m pip install --upgrade pip
-        - pip install poetry --user
+        - pip install poetry
       install: poetry install
       script: poetry run pytest
       env: PATH=/c/Python37:/c/Python37/Scripts:$PATH
