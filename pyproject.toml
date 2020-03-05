@@ -6,7 +6,7 @@ authors = ["NicklasTegner <NicklasMCHD@live.dk>"]
 license = "Mozilla Public License 2.0"
 
 [tool.poetry.dependencies]
-python = ">= 2.7, >= 3.5"
+python = ">= 3.6"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.3.5"
